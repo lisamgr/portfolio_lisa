@@ -1,0 +1,89 @@
+.hero-img-fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 90vh;
+  object-fit: cover;
+  display: block;
+  margin-block: 2rem;
+}
+
+.case-title {
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+}
+.case-text {
+  max-width: 600px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 3.5rem;
+}
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.case-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.case-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+.case-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin-inline: auto;
+}
+
+.card-case {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 3rem 3rem;
+  background: #111111;
+  border-radius: 5px;
+}
+.card-case .left-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card-case .right-card {
+  flex: 1;
+}
+.card-case .card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card-case .card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+.card-case .card-subtitle {
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+.card-case .card-text {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.7;
+}/*# sourceMappingURL=stylecase.css.map */

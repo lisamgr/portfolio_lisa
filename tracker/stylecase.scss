@@ -1,0 +1,113 @@
+.case-section { }
+
+.case-H1 { }
+
+.case-subtitle { }
+
+.case-bio { }
+
+.hero-img-fullwidth {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 90vh;
+  object-fit: cover;
+  display: block;
+  margin-block: 2rem;
+}
+
+
+// ── Case study ───────────────────────────────────
+.case {
+  &-title {
+    font-size: 1.5rem;
+    letter-spacing: .06em;
+    margin-bottom: 2.2rem;
+    font-weight: 400;
+  }
+
+  &-text {
+    max-width: 600px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.9;
+    margin-bottom: 3.5rem;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+  }
+
+  &-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s ease;
+  }
+
+  &-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+  }
+}
+
+// ── Card case ────────────────────────────────────
+.card-case {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 3rem 3rem;
+  background: #111111;
+  border-radius: 5px;
+
+  .left-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .right-card {
+    flex: 1;
+  }
+
+  .card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .card-subtitle {
+    font-size: .85rem;
+    color: var(--accent-color);
+    letter-spacing: .06em;
+    margin: 0;
+  }
+
+  .card-text {
+    font-size: .9rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin: 0;
+    opacity: .7;
+  }
+}
