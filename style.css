@@ -183,6 +183,7 @@ p {
 .hero-cta {
   display: inline-block;
   margin-top: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 1rem;
   font-weight: 500;
   font-style: italic;
@@ -326,5 +327,8 @@ footer .socials a::before {
   }
   .container {
     max-width: 100%;
+  }
+  .hero-illustration {
+    margin-top: 2.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
