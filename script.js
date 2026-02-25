@@ -1,15 +1,37 @@
 // Fonction pour charger un fichier HTML dans un élément
-function loadHTML(selector, url) {
+function loadHTML(selector, url, callback) {
   fetch(url)
     .then((response) => response.text())
     .then((data) => {
       document.querySelector(selector).innerHTML = data;
+      // Si on a passé une fonction de callback, on l'exécute ici
+      if (callback) callback();
     })
     .catch((error) => console.error("Erreur :", error));
 }
 
+function initNavigation() {
+  const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+  const icon = hamburger.querySelector(".material-symbols-outlined");
+
+  if (hamburger && navLinks && icon) {
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+
+      // On s'assure d'écrire "close" tout en minuscules
+      if (navLinks.classList.contains("active")) {
+        icon.textContent = "close";
+      } else {
+        icon.textContent = "menu";
+      }
+    });
+  }
+}
+
 // Appel pour header et footer
 document.addEventListener("DOMContentLoaded", () => {
-  loadHTML("#header-placeholder", "header.html");
+  // On passe 'initNavigation' comme callback pour le header
+  loadHTML("#header-placeholder", "header.html", initNavigation);
   loadHTML("#footer-placeholder", "footer.html");
 });
