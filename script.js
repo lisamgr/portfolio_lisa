@@ -4,7 +4,7 @@ function loadHTML(selector, url, callback) {
     .then((response) => response.text())
     .then((data) => {
       document.querySelector(selector).innerHTML = data;
-      // Si on a passé une fonction de callback, on l'exécute ici
+      // Si fonction de callback, exécute ici
       if (callback) callback();
     })
     .catch((error) => console.error("Erreur :", error));
@@ -19,7 +19,7 @@ function initNavigation() {
     hamburger.addEventListener("click", () => {
       navLinks.classList.toggle("active");
 
-      // On s'assure d'écrire "close" tout en minuscules
+      
       if (navLinks.classList.contains("active")) {
         icon.textContent = "close";
       } else {
@@ -29,9 +29,9 @@ function initNavigation() {
   }
 }
 
-// Appel pour header et footer
+// header et footer
 document.addEventListener("DOMContentLoaded", () => {
-  // On passe 'initNavigation' comme callback pour le header
+  // passe 'initNavigation' comme callback pour le header
   loadHTML("#header-placeholder", "header.html", initNavigation);
   loadHTML("#footer-placeholder", "footer.html");
 });
