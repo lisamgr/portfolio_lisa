@@ -5,124 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lisa — UI/UX Designer</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- This will link our stylesheet to our index.html: -->
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <!-- This will link the google icon for our hamburger bar 
       so we have access to use it -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
   </head>
   <body>
+    <!-- Navigation ... -->
+    <nav class="navbar">
+      <a href="/index.html" class="nav-logo">lisa<span>mag</span></a>
 
-       
-  <!-- Navigation ... -->
-<div id="header-placeholder"></div>
+      <button class="hamburger" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
 
-<!-- Hero  ------------------------>
- <main class="container">
-    <!-- Hero Section -->
-<section class="hero-section">
-  <div class="hero-content">
-    <h1 class="hero-title">Hello, I'm Lisa</h1>
-    <h2 class="hero-subtitle">I'm a ui ux designer based in Belgium</h2>
-    <p class="hero-bio">With a background in <em class="em em--peach">print</em> and <em class="em em--mint">graphic design</em>. I'm currently completing a UI/UX program at Cepegra, exploring how design shapes the way people feel and move through digital spaces. When I'm not designing, you'll find me lost in <em class="em em--lavender">music</em> or deep in a <em class="em em--sky">video game</em>.</p>
-    <span class="hero-cta">I am currently looking for an internship</span>
-    <button class="hero-button">Let's work together :)</button>
-  </div>
-  <div class="hero-illustration">
-     <span class="quack">quack !</span>
-    <img src="img/humation-mint.png" alt="" />
-  </div>
-</section>
-  
-  <!-- cards ------------------------>
-  
-    <section class="cards-container">
-      <!-- bpm tracker -->
-      <div class="card">
-       <a href="tracker/index.html">
-  <img class="card-image" src="img/tracker_app_thumbnail.png" alt="bpm tracker thumbnail" />
-</a>
-        <div class="card-infos">
-          <h3>BPM Tracker</h2>
-          <p class="card-title">
-            Mobile app for tracking heart rate throughout the day
+      <ul class="nav-links">
+        <li><a href="/index.html" class="link-work">work</a></li>
+        <li><a href="/fun.html" class="link-fun">fun</a></li>
+        <li><a href="#" class="link-info">info</a></li>
+        <li><a href="#" class="link-resume">resume</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero  ------------------------>
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Hello, I'm Lisa</h1>
+          <h2 class="hero-subtitle">I'm a ui ux designer based in Belgium</h2>
+          <p class="hero-bio">
+            With a background in <em class="em em--peach">print</em> and
+            <em class="em em--mint">graphic design</em>. I'm currently
+            completing a UI/UX program at Cepegra, exploring how design shapes
+            the way people feel and move through digital spaces. When I'm not
+            designing, you'll find me lost in
+            <em class="em em--lavender">music</em> or deep in a
+            <em class="em em--sky">video game</em>.
           </p>
-          <div class="tags">
-                <span class="tag tag--app">App</span>
-                <span class="tag tag--ui">UI</span>
-                <span class="tag tag--ux">UX</span>
-              </div>
+          <span class="hero-cta">I am currently looking for an internship</span>
+          <button class="hero-button">Let's work together :)</button>
         </div>
-      </div>
-      <!-- cinemon -->
-      <div class="card">
-        <img class="card-image" src="img/cinemon_thumbnail.png" alt="cinémon thumbnail" />
-        <div class="card-infos">
-          <h3>Cinémon</h3>
-          <p>Crafting a web experience for an independent arthouse cinema</p>
-             <div class="tags">
-                <span class="tag tag--website">Website</span>
-                <span class="tag tag--ui">UI</span>
-              </div>
+        <div class="hero-illustration">
+          <span class="quack">quack !</span>
+          <img src="img/humation-mint.png" alt="" />
         </div>
-      </div>
-      <!-- Homehub -->
-      <div class="card">
-        <img class="card-image" src="img/homehub_thumbnail.png" alt="homehub thumbnail" />
-        <div class="card-infos">
-          <h3>HomeHub</h3>
-          <p>A connected home dashboard to monitor energy and earn rewards</p>
-          <div class="tags">
-                <span class="tag tag--app">App</span>
-                <span class="tag tag--ui">UI</span>
-                <span class="tag tag--ux">UX</span>
-              </div>
+      </section>
+
+      <!-- cards ------------------------>
+
+      <section class="cards-container">
+        <!-- bpm tracker -->
+        <div class="card">
+          <a href="tracker/index.html">
+            <img
+              class="card-image"
+              src="img/tracker_app_thumbnail.png"
+              alt="bpm tracker thumbnail"
+            />
+          </a>
+          <div class="card-infos">
+            <h3>BPM Tracker</h3>
+            <p class="card-title">
+              Mobile app for tracking heart rate throughout the day
+            </p>
+            <div class="tags">
+              <span class="tag tag--app">App</span>
+              <span class="tag tag--ui">UI</span>
+              <span class="tag tag--ux">UX</span>
+            </div>
+          </div>
         </div>
-      </div>
+        <!-- cinemon -->
+        <div class="card">
+          <img
+            class="card-image"
+            src="img/cinemon_thumbnail.png"
+            alt="cinémon thumbnail"
+          />
+          <div class="card-infos">
+            <h3>Cinémon</h3>
+            <p>Crafting a web experience for an independent arthouse cinema</p>
+            <div class="tags">
+              <span class="tag tag--website">Website</span>
+              <span class="tag tag--ui">UI</span>
+            </div>
+          </div>
+        </div>
         <!-- Homehub -->
-      <div class="card">
-        <img class="card-image" src="img/ui-cards_thumbnail.png" alt="member card thumbnail" />
-        <div class="card-infos">
-          <h3>Member Card</h3>
-          <p>Designing a team member card as a reusable interface element</p>
-           <div class="tags">
-                <span class="tag tag--component">Component</span>
-                <span class="tag tag--ui">UI</span>
-                
-              </div>
+        <div class="card">
+          <img
+            class="card-image"
+            src="img/homehub_thumbnail.png"
+            alt="homehub thumbnail"
+          />
+          <div class="card-infos">
+            <h3>HomeHub</h3>
+            <p>A connected home dashboard to monitor energy and earn rewards</p>
+            <div class="tags">
+              <span class="tag tag--app">App</span>
+              <span class="tag tag--ui">UI</span>
+              <span class="tag tag--ux">UX</span>
+            </div>
+          </div>
         </div>
-      </div>
+        <!-- Homehub -->
+        <div class="card">
+          <img
+            class="card-image"
+            src="img/ui-cards_thumbnail.png"
+            alt="member card thumbnail"
+          />
+          <div class="card-infos">
+            <h3>Member Card</h3>
+            <p>Designing a team member card as a reusable interface element</p>
+            <div class="tags">
+              <span class="tag tag--component">Component</span>
+              <span class="tag tag--ui">UI</span>
+            </div>
+          </div>
+        </div>
         <!-- kee -->
-      <div class="card">
-        <img class="card-image" src="img/kee_thumbnail.png" alt="keecode thumbnail" />
-        <div class="card-infos">
-          <h3>Kee.</h3>
-          <p>A minimal Apple-style numpad built with HTML, CSS & a touch of JS</p>
-          <div class="tags">
-                <span class="tag tag--app">App</span>
-                <span class="tag tag--html-css">HTML/CSS</span>
-               </div>
+        <div class="card">
+          <img
+            class="card-image"
+            src="img/kee_thumbnail.png"
+            alt="keecode thumbnail"
+          />
+          <div class="card-infos">
+            <h3>Kee.</h3>
+            <p>
+              A minimal Apple-style numpad built with HTML, CSS & a touch of JS
+            </p>
+            <div class="tags">
+              <span class="tag tag--app">App</span>
+              <span class="tag tag--html-css">HTML/CSS</span>
+            </div>
+          </div>
         </div>
-      </div>
         <!-- clustr -->
-      <div class="card">
-        <img class="card-image" src="img/clustr_thumbnail.png" alt="clustr thumbnail" />
-        <div class="card-infos">
-          <h3>Clustr.</h3>
-          <p>A tool for building balanced groups from a list of people</p>
-          <div class="tags">
-                <span class="tag tag--website">Website</span>
-                <span class="tag tag--ui">UI</span>
-                <span class="tag tag--ux">UX</span>
-               </div>
+        <div class="card">
+          <img
+            class="card-image"
+            src="img/clustr_thumbnail.png"
+            alt="clustr thumbnail"
+          />
+          <div class="card-infos">
+            <h3>Clustr.</h3>
+            <p>A tool for building balanced groups from a list of people</p>
+            <div class="tags">
+              <span class="tag tag--website">Website</span>
+              <span class="tag tag--ui">UI</span>
+              <span class="tag tag--ux">UX</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-   </main>
-  <div id="footer-placeholder"></div>
-  <script src="script.js"></script>
-</body>
+      </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
