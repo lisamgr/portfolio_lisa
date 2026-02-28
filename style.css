@@ -343,6 +343,11 @@ footer {
   border-top: 1px solid var(--colors-border);
   font-size: 0.78rem;
 }
+footer .belgium:hover {
+  background: linear-gradient(to right, #000000, #FFE400, #FF0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 footer .socials {
   display: flex;
   gap: 1.5rem;

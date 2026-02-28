@@ -286,6 +286,14 @@ footer {
   border-top: 1px solid var(--colors-border);
   font-size: .78rem;
 
+ .belgium {
+  &:hover {
+    background: linear-gradient(to right, #000000, #FFE400, #FF0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
   .socials {
     display: flex;
     gap: 1.5rem;
