@@ -63,12 +63,12 @@ a {
 
 h1 { font-size: 2.5rem; margin-bottom: 1.6rem; }
 h2 { font-size: 1.8rem; margin-bottom: 1rem; }
-h3 { font-size: 1.5rem; margin-bottom: 0.8rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
 
 p {
   font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1rem;
 }
 
 /* --- NAVIGATION --- */
@@ -217,6 +217,13 @@ em.em--sky      { color: var(--colors-sky);      font-style: normal; }
   height: auto;
   transition: transform .45s ease;
   &:hover { transform: scale(1.03); }
+  margin-bottom: 1rem;;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
 }
 
 .tags {
