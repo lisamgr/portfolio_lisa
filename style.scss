@@ -4,21 +4,40 @@
 
 /* --- VARIABLES --- */
 :root {
+  /* orange */
   --colors-orange-100: #ffe9e1;
   --colors-orange-200: #fd9d75;
   --colors-orange-300: #da5810;
   --colors-orange-400: #903807;
   --colors-orange-500: #4c1a02;
+
+  /* dark */
   --colors-dark-500: #000000;
   --colors-dark-400: #080707;
   --colors-dark-300: #191818;
   --colors-dark-200: #2c2b2b;
   --colors-dark-100: #413f3f;
+
+  /* white / gray */
   --colors-white-100: #f3f1f1;
   --colors-white-200: #d8d8d8;
   --colors-white-300: #aeadad;
   --colors-white-400: #919191;
   --colors-white-500: #6d6d6d;
+
+  /* accents */
+  --colors-peach:    #ffb4a2;
+  --colors-mint:     #b5ead7;
+  --colors-lavender: #c9b8f5;
+  --colors-sky:      #bde0fe;
+  --colors-yellow:   #ffd6a5;
+  --colors-blue:     #a2d2ff;
+  --colors-quack:    #FFD412;
+
+  /* divers */
+  --colors-border:   #222222;
+  --colors-image-bg: #F6F8F7;
+
   --font: "DM Mono", monospace;
 }
 
@@ -92,10 +111,10 @@ p {
     color: var(--colors-white-100);
     transition: opacity 0.2s, color 0.2s;
 
-    &.link-work:hover    { color: #ffb4a2 !important; }
-    &.link-fun:hover     { color: #ffd6a5 !important; }
-    &.link-info:hover    { color: #c9b8f5 !important; }
-    &.link-resume:hover  { color: #b5ead7 !important; }
+    &.link-work:hover    { color: var(--colors-peach) !important; }
+    &.link-fun:hover     { color: var(--colors-yellow) !important; }
+    &.link-info:hover    { color: var(--colors-lavender) !important; }
+    &.link-resume:hover  { color: var(--colors-mint) !important; }
     &.link-contact:hover { color: var(--colors-orange-200) !important; }
   }
 }
@@ -112,10 +131,10 @@ nav:has(a:hover) a:not(:hover) {
 }
 
 /* --- EM HIGHLIGHTS (partagés) --- */
-em.em--peach    { color: #ffb4a2; font-style: normal; }
-em.em--mint     { color: #b5ead7; font-style: normal; }
-em.em--lavender { color: #c9b8f5; font-style: normal; }
-em.em--sky      { color: #bde0fe; font-style: normal; }
+em.em--peach    { color: var(--colors-peach);    font-style: normal; }
+em.em--mint     { color: var(--colors-mint);     font-style: normal; }
+em.em--lavender { color: var(--colors-lavender); font-style: normal; }
+em.em--sky      { color: var(--colors-sky);      font-style: normal; }
 
 /* --- INDEX --- */
 .hero-section {
@@ -172,7 +191,7 @@ em.em--sky      { color: #bde0fe; font-style: normal; }
     left: 50%;
     opacity: 0;
     transition: opacity 0.2s;
-    color: #FFD412;
+    color: var(--colors-quack);
   }
 
   &:hover .quack { opacity: 1; }
@@ -215,12 +234,12 @@ em.em--sky      { color: #bde0fe; font-style: normal; }
   color: var(--colors-orange-200);
   opacity: .7;
 
-  &--app       { border-color: #ffb4a2; color: #ffb4a2; }
-  &--ui        { border-color: #b5ead7; color: #b5ead7; }
-  &--ux        { border-color: #c9b8f5; color: #c9b8f5; }
-  &--website   { border-color: #ffd6a5; color: #ffd6a5; }
-  &--component { border-color: #a2d2ff; color: #a2d2ff; }
-  &--html-css  { border-color: #bde0fe; color: #bde0fe; }
+  &--app       { border-color: var(--colors-peach);    color: var(--colors-peach); }
+  &--ui        { border-color: var(--colors-mint);     color: var(--colors-mint); }
+  &--ux        { border-color: var(--colors-lavender); color: var(--colors-lavender); }
+  &--website   { border-color: var(--colors-yellow);   color: var(--colors-yellow); }
+  &--component { border-color: var(--colors-blue);     color: var(--colors-blue); }
+  &--html-css  { border-color: var(--colors-sky);      color: var(--colors-sky); }
 }
 
 /* --- FOOTER --- */
@@ -229,7 +248,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem clamp(1.5rem, 5vw, 3rem);
-  border-top: 1px solid #222;
+  border-top: 1px solid var(--colors-border);
   font-size: .78rem;
 
   .socials {
@@ -284,7 +303,7 @@ footer {
   .quack {
     font-family: "Shadows Into Light", cursive;
     font-size: 1.4rem;
-    color: #FFD412;
+    color: var(--colors-quack);
     position: absolute;
     white-space: nowrap;
     top: -2rem;
@@ -340,7 +359,7 @@ footer {
     left: 50%;
     opacity: 0;
     transition: opacity 0.2s;
-    color: #FFD412;
+    color: var(--colors-quack);
   }
 
   &:hover .quack { opacity: 1; }
@@ -350,6 +369,103 @@ footer {
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
+  }
+}
+
+/* --- ABOUT ME (funsies) --- */
+.funsies {
+  display: flex;
+  gap: 2rem;
+
+  .funsie-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--colors-dark-200);
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--colors-white-300);
+    }
+  }
+}
+
+.funsie-card {
+  &--music .funsie-label::before {
+    content: "∷ ";
+    color: var(--colors-lavender);
+  }
+
+  &--gaming .funsie-label::before {
+    content: "∷ ";
+    color: var(--colors-sky);
+  }
+}
+
+/* --- FUN --- */
+.fun-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.fun-content {
+  flex: 1;
+  width: 100%;
+
+  a {
+    display: block;
+  }
+}
+
+.fun-image {
+  width: 100%;
+  height: auto;
+  background: var(--colors-image-bg);
+  margin-bottom: 1rem;
+}
+
+.fun-illustration {
+  width: 200px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--colors-orange-200);
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  img:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &:hover img:first-child {
+    opacity: 1;
+  }
+}
+
+em.em--fun {
+  color: var(--colors-orange-200);
+  font-style: normal;
+
+  &:hover {
+    font-style: italic;
   }
 }
 
@@ -450,43 +566,5 @@ footer {
     margin-bottom: 2.5rem;
     width: 150px;
     align-self: center;
-  }
-}
-
-.funsies {
-  display: flex;
-  gap: 2rem;
-  
-
-  .funsie-card {
-    display: flex; flex-direction: column; gap: 1rem;
-    background-color: var(--colors-dark-200);
-    padding: 1.5rem;
-    border-radius: 8px;
-    flex: 1;
-
-    img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-      border-radius: 4px;
-    }
-
-    p {
-      font-size: 0.9rem;
-      color: var(--colors-white-300);
-    }
-  }
-}
-
-.funsie-card {
-  &--music .funsie-label::before {
-    content: "∷ ";
-    color: #c9b8f5;
-  }
-
-  &--gaming .funsie-label::before {
-    content: "∷ ";
-    color: #bde0fe;
   }
 }
