@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lisa — UI/UX Designer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- This will link our stylesheet to our index.html: -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- This will link the google icon for our hamburger bar 
+      so we have access to use it -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <!-- Navigation ... -->
+    <nav class="navbar">
+      <a href="/index.html" class="nav-logo">lisa<span>mag</span></a>
+
+      <button class="hamburger" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="/index.html" class="link-work">work</a></li>
+        <li><a href="/fun.html" class="link-fun">fun</a></li>
+        <li><a href="/about.html" class="link-info">info</a></li>
+        <li><a href="/contact.html" class="link-contact">contact</a></li>
+        <li><a href="/resume.html" class="link-resume">resume</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero  ------------------------>
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Design is <em class="em--fun">fun</em></h1>
+          <h2 class="hero-subtitle"></h2>
+          <p class="hero-bio">
+            When I'm not working on projects, playing some music or wandering in
+            one of my video games, I love to explore the creative side of design
+            by creating fun and experimental projects. These projects allow me
+            to push the boundaries of my creativity and try out new techniques
+            and tools. I find joy in the process of bringing my ideas to life.
+          </p>
+        </div>
+        <div class="fun-illustration">
+          <img src="img/lm-smile.png" alt="" class="quack" />
+          <img src="img/lm-neutral.png" alt="prout" />
+        </div>
+      </section>
+
+      <!-- fun ------------------------>
+
+      <section class="fun-container">
+        <!-- bpm tracker -->
+        <div class="fun-content">
+          <a href="tracker/index.html">
+            <img
+              class="fun-image"
+              src="fun/audio-mixer_4096 copy.webp"
+              alt="audio mixer thumbnail"
+            />
+          </a>
+          <div class="fun-infos">
+            <h3>Audio mixer</h3>
+            <p class="fun-title">
+              Exploring Figma's 3D capabilities by recreating an audio mixer
+              from scratch.
+            </p>
+            <div class="tags">
+              <span class="tag tag--app">App</span>
+              <span class="tag tag--ui">UI</span>
+              <span class="tag tag--ux">UX</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span class="belgium">made in belgium</span>
+      <nav class="socials">
+        <a href="https://www.behance.net/lisamag">behance</a>
+        <a href="#">linkedin</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
