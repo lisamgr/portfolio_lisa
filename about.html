@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lisa — UI/UX Designer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- This will link our stylesheet to our index.html: -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- This will link the google icon for our hamburger bar 
+      so we have access to use it -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <!-- Navigation ... -->
+    <nav class="navbar">
+      <a href="/index.html" class="nav-logo">lisa<span>mag</span></a>
+
+      <button class="hamburger" aria-label="Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="/index.html" class="link-work">work</a></li>
+        <li><a href="/fun.html" class="link-fun">fun</a></li>
+        <li><a href="/about.html" class="link-info">info</a></li>
+        <li><a href="/contact.html" class="link-contact">contact</a></li>
+        <li><a href="/resume.html" class="link-resume">resume</a></li>
+      </ul>
+    </nav>
+
+    <!-- about-me  ------------------------>
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="about-section">
+        <div class="about-content">
+          <h1 class="about-title">So nice to meet you, I’m Lisa !</h1>
+          <p class="about-bio">
+            With a background in <em class="em--peach">print</em> and
+            <em class="em--mint">graphic design</em>. I'm currently completing a
+            UI/UX program at Cepegra, exploring how design shapes the way people
+            feel and move through digital spaces. When I'm not designing, you'll
+            find me lost in <em class="em--lavender">music</em> or deep in a
+            <em class="em--sky">video game</em>.
+          </p>
+        </div>
+        <div class="about-illustration">
+          <span class="quack">quack !</span>
+          <img src="img/humation-mint.png" alt="" />
+        </div>
+      </section>
+      <section class="funsies">
+        <div class="funsie-card funsie-card--music">
+          <img src="img/music.png" alt="music" />
+          <p>Listening to music is more than a pastime...</p>
+          <span class="funsie-label">music</span>
+        </div>
+        <div class="funsie-card funsie-card--gaming">
+          <img src="img/gaming.png" alt="gaming" />
+          <p>Video games have been a part of my life...</p>
+          <span class="funsie-label">gaming</span>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

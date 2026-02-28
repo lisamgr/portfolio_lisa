@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styleguide — Lisa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --colors-orange-100: #ffe9e1;
+        --colors-orange-200: #fd9d75;
+        --colors-orange-300: #da5810;
+        --colors-orange-400: #903807;
+        --colors-orange-500: #4c1a02;
+        --colors-dark-500: #000000;
+        --colors-dark-400: #080707;
+        --colors-dark-300: #191818;
+        --colors-dark-200: #2c2b2b;
+        --colors-dark-100: #413f3f;
+        --colors-white-100: #f3f1f1;
+        --colors-white-200: #d8d8d8;
+        --colors-white-300: #aeadad;
+        --colors-white-400: #919191;
+        --colors-white-500: #6d6d6d;
+        --font: "DM Mono", monospace;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--colors-dark-300);
+        color: var(--colors-white-100);
+        font-family: var(--font);
+        -webkit-font-smoothing: antialiased;
+        padding: 3rem clamp(1.5rem, 6vw, 5rem);
+        max-width: 900px;
+        margin-inline: auto;
+      }
+
+      a {
+        color: var(--colors-orange-300);
+        text-decoration: none;
+      }
+
+      /* ── STYLEGUIDE LAYOUT ── */
+      .sg-header {
+        border-bottom: 1px solid var(--colors-dark-100);
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .sg-header h1 {
+        font-size: 0.7rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--colors-white-500);
+        margin-bottom: 0.4rem;
+      }
+
+      .sg-header p {
+        font-size: 0.8rem;
+        color: var(--colors-white-400);
+      }
+
+      .sg-section {
+        margin-bottom: 4rem;
+      }
+
+      .sg-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--colors-white-500);
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--colors-dark-100);
+      }
+
+      .sg-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: flex-start;
+        margin-bottom: 1rem;
+      }
+
+      .sg-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      .sg-name {
+        font-size: 0.6rem;
+        letter-spacing: 0.08em;
+        color: var(--colors-white-500);
+      }
+
+      /* ── COLORS ── */
+      .color-swatch {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+      }
+
+      .color-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .color-group-label {
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--colors-white-500);
+        margin-bottom: 0.4rem;
+      }
+
+      .color-row {
+        display: flex;
+        gap: 0.8rem;
+        flex-wrap: wrap;
+      }
+
+      /* ── TYPOGRAPHY ── */
+      .type-specimen {
+        margin-bottom: 1.5rem;
+      }
+
+      .type-meta {
+        font-size: 0.6rem;
+        color: var(--colors-white-500);
+        letter-spacing: 0.08em;
+        margin-top: 0.3rem;
+      }
+
+      /* native styles from site */
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
+      }
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+      }
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+      }
+
+      p.body-text {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .case-title-demo {
+        font-size: 1.5rem;
+        letter-spacing: 0.06em;
+        font-weight: 400;
+      }
+
+      .case-text-demo {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.9;
+        letter-spacing: -0.2px;
+      }
+
+      .case-bio-demo {
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 1.7;
+      }
+
+      .detail-label-demo {
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--colors-white-500);
+      }
+
+      .detail-value-demo {
+        font-size: 0.85rem;
+      }
+
+      .nav-link-demo {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        color: var(--colors-white-100);
+      }
+
+      .nav-logo-demo {
+        font-size: 0.95rem;
+        letter-spacing: 0.02em;
+        color: var(--colors-white-100);
+      }
+
+      .footer-text-demo {
+        font-size: 0.78rem;
+      }
+
+      .tag-font-demo {
+        font-size: 0.7rem;
+      }
+
+      /* ── EM HIGHLIGHTS ── */
+      em.em--peach {
+        color: #ffb4a2;
+        font-style: normal;
+      }
+      em.em--mint {
+        color: #b5ead7;
+        font-style: normal;
+      }
+      em.em--lavender {
+        color: #c9b8f5;
+        font-style: normal;
+      }
+      em.em--sky {
+        color: #bde0fe;
+        font-style: normal;
+      }
+
+      /* ── TAGS ── */
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+      }
+      .tag {
+        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+        border-radius: 100px;
+        border: 1px solid var(--colors-orange-200);
+        color: var(--colors-orange-200);
+        opacity: 0.7;
+      }
+      .tag--app {
+        border-color: #ffb4a2;
+        color: #ffb4a2;
+      }
+      .tag--ui {
+        border-color: #b5ead7;
+        color: #b5ead7;
+      }
+      .tag--ux {
+        border-color: #c9b8f5;
+        color: #c9b8f5;
+      }
+      .tag--website {
+        border-color: #ffd6a5;
+        color: #ffd6a5;
+      }
+      .tag--component {
+        border-color: #a2d2ff;
+        color: #a2d2ff;
+      }
+      .tag--html-css {
+        border-color: #bde0fe;
+        color: #bde0fe;
+      }
+
+      /* ── BUTTONS ── */
+      .hero-button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: transparent;
+        border: 1px solid var(--colors-orange-200);
+        color: var(--colors-orange-200);
+        border-radius: 50px;
+        font-family: var(--font);
+        font-size: 0.9rem;
+        letter-spacing: -0.2px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .hero-button:hover {
+        background-color: var(--colors-orange-300);
+        color: var(--colors-dark-300);
+        border-color: var(--colors-orange-300);
+      }
+
+      /* ── CTA ── */
+      .hero-cta {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 500;
+        font-style: italic;
+      }
+
+      /* ── PROJECT DETAIL ── */
+      .project-detail {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        border-left: 1px solid var(--colors-orange-200);
+        padding-left: 1rem;
+      }
+
+      .detail-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--colors-white-500);
+      }
+
+      .detail-value {
+        font-size: 0.85rem;
+        color: var(--colors-white-100);
+      }
+
+      /* ── CARD CASE ── */
+      .card-case-demo {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 3rem;
+        background: #111111;
+        border-radius: 5px;
+      }
+
+      .card-case-demo .card-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+      }
+
+      .card-case-demo .card-subtitle {
+        font-size: 0.85rem;
+        color: var(--colors-orange-200);
+        letter-spacing: 0.06em;
+      }
+
+      .card-case-demo .card-text {
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 1.7;
+        opacity: 0.7;
+      }
+
+      .card-case-demo .card-img-placeholder {
+        flex: 1;
+        background: var(--colors-dark-200);
+        border-radius: 8px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.65rem;
+        color: var(--colors-white-500);
+        letter-spacing: 0.08em;
+      }
+
+      /* ── QUACK ── */
+      .quack-demo {
+        font-family: "Shadows Into Light", cursive;
+        font-size: 2rem;
+        color: #ffd412;
+      }
+
+      /* ── DIVIDER ── */
+      .sg-divider {
+        border: none;
+        border-top: 1px solid var(--colors-dark-100);
+        margin-bottom: 4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sg-header">
+      <h1>Styleguide</h1>
+      <p>lisa mag — design reference</p>
+    </div>
+
+    <!-- COLORS -->
+    <section class="sg-section">
+      <p class="sg-label">Colors</p>
+
+      <div class="color-group">
+        <p class="color-group-label">Orange</p>
+        <div class="color-row">
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #ffe9e1"></div>
+            <span class="sg-name">orange-100<br />#ffe9e1</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #fd9d75"></div>
+            <span class="sg-name">orange-200<br />#fd9d75</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #da5810"></div>
+            <span class="sg-name">orange-300<br />#da5810</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #903807"></div>
+            <span class="sg-name">orange-400<br />#903807</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #4c1a02"></div>
+            <span class="sg-name">orange-500<br />#4c1a02</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <p class="color-group-label">Dark</p>
+        <div class="color-row">
+          <div class="sg-item">
+            <div
+              class="color-swatch"
+              style="background: #413f3f; border: 1px solid #2c2b2b"
+            ></div>
+            <span class="sg-name">dark-100<br />#413f3f</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #2c2b2b"></div>
+            <span class="sg-name">dark-200<br />#2c2b2b</span>
+          </div>
+          <div class="sg-item">
+            <div
+              class="color-swatch"
+              style="background: #191818; border: 1px solid #2c2b2b"
+            ></div>
+            <span class="sg-name">dark-300 ← body<br />#191818</span>
+          </div>
+          <div class="sg-item">
+            <div
+              class="color-swatch"
+              style="background: #080707; border: 1px solid #2c2b2b"
+            ></div>
+            <span class="sg-name">dark-400<br />#080707</span>
+          </div>
+          <div class="sg-item">
+            <div
+              class="color-swatch"
+              style="background: #000000; border: 1px solid #2c2b2b"
+            ></div>
+            <span class="sg-name">dark-500<br />#000000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <p class="color-group-label">White / Gray</p>
+        <div class="color-row">
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #f3f1f1"></div>
+            <span class="sg-name">white-100<br />#f3f1f1</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #d8d8d8"></div>
+            <span class="sg-name">white-200<br />#d8d8d8</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #aeadad"></div>
+            <span class="sg-name">white-300<br />#aeadad</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #919191"></div>
+            <span class="sg-name">white-400<br />#919191</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #6d6d6d"></div>
+            <span class="sg-name">white-500<br />#6d6d6d</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="color-group">
+        <p class="color-group-label">Accent (em highlights & tags)</p>
+        <div class="color-row">
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #ffb4a2"></div>
+            <span class="sg-name">peach / app<br />#ffb4a2</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #b5ead7"></div>
+            <span class="sg-name">mint / ui<br />#b5ead7</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #c9b8f5"></div>
+            <span class="sg-name">lavender / ux<br />#c9b8f5</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #bde0fe"></div>
+            <span class="sg-name">sky / html-css<br />#bde0fe</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #ffd6a5"></div>
+            <span class="sg-name">website<br />#ffd6a5</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #a2d2ff"></div>
+            <span class="sg-name">component<br />#a2d2ff</span>
+          </div>
+          <div class="sg-item">
+            <div class="color-swatch" style="background: #ffd412"></div>
+            <span class="sg-name">quack!<br />#FFD412</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <!-- TYPOGRAPHY -->
+    <section class="sg-section">
+      <p class="sg-label">Typography — DM Mono</p>
+
+      <div class="type-specimen">
+        <h1>h1 — Hello, I'm Lisa</h1>
+        <p class="type-meta">2.5rem · DM Mono · weight 400</p>
+      </div>
+
+      <div class="type-specimen">
+        <h2>h2 — UI/UX Designer</h2>
+        <p class="type-meta">1.8rem · DM Mono · weight 400</p>
+      </div>
+
+      <div class="type-specimen">
+        <h3>h3 — BPM Tracker</h3>
+        <p class="type-meta">1.5rem · DM Mono · weight 400</p>
+      </div>
+
+      <div class="type-specimen">
+        <p class="case-title-demo">case-title — BPM Tracker</p>
+        <p class="type-meta">1.5rem · letter-spacing .06em · weight 400</p>
+      </div>
+
+      <div class="type-specimen">
+        <p class="body-text">
+          body — Mobile app for tracking heart rate throughout the day with a
+          clean, minimal interface.
+        </p>
+        <p class="type-meta">1rem · line-height 1.5 · weight 400</p>
+      </div>
+
+      <div class="type-specimen">
+        <p class="case-text-demo">
+          case-text — A more generous line height for case study body copy,
+          easier to read at length.
+        </p>
+        <p class="type-meta">
+          1rem · line-height 1.9 · letter-spacing -0.2px · weight 400
+        </p>
+      </div>
+
+      <div class="type-specimen">
+        <p class="case-bio-demo">
+          case-bio — A lighter weight, slightly smaller text for intro
+          paragraphs in case studies.
+        </p>
+        <p class="type-meta">0.9rem · line-height 1.7 · weight 300</p>
+      </div>
+
+      <div class="type-specimen">
+        <span class="nav-logo-demo"
+          >nav-logo — lisa<span style="color: var(--colors-orange-300)"
+            >mag</span
+          ></span
+        >
+        <p class="type-meta">0.95rem · letter-spacing 0.02em</p>
+      </div>
+
+      <div class="type-specimen">
+        <span class="nav-link-demo">nav-link — work · fun · info · resume</span>
+        <p class="type-meta">0.8rem · letter-spacing 0.08em</p>
+      </div>
+
+      <div class="type-specimen">
+        <span class="hero-cta"
+          >hero-cta — I am currently looking for an internship</span
+        >
+        <p class="type-meta">1rem · weight 500 · italic</p>
+      </div>
+
+      <div class="type-specimen">
+        <span class="footer-text-demo">footer — © 2025 lisa mag</span>
+        <p class="type-meta">0.78rem</p>
+      </div>
+
+      <div class="type-specimen">
+        <span class="tag-font-demo">tag — App · UI · UX</span>
+        <p class="type-meta">0.7rem</p>
+      </div>
+
+      <div class="type-specimen">
+        <span class="detail-label-demo">detail-label — ROLE</span><br />
+        <span class="detail-value-demo">detail-value — UI/UX Designer</span>
+        <p class="type-meta">
+          label: 0.65rem · uppercase · letter-spacing 0.1em · white-500<br />value:
+          0.85rem · white-100
+        </p>
+      </div>
+
+      <div class="type-specimen">
+        <span class="quack-demo">quack !</span>
+        <p class="type-meta">2rem · Shadows Into Light · #FFD412</p>
+      </div>
+
+      <div class="type-specimen">
+        <p class="body-text">
+          With a background in <em class="em--peach">print</em> and
+          <em class="em--mint">graphic design</em>. Lost in
+          <em class="em--lavender">music</em> or deep in a
+          <em class="em--sky">video game</em>.
+        </p>
+        <p class="type-meta">em highlights — peach · mint · lavender · sky</p>
+      </div>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <!-- TAGS -->
+    <section class="sg-section">
+      <p class="sg-label">Tags</p>
+      <div class="tags">
+        <span class="tag tag--app">App</span>
+        <span class="tag tag--ui">UI</span>
+        <span class="tag tag--ux">UX</span>
+        <span class="tag tag--website">Website</span>
+        <span class="tag tag--component">Component</span>
+        <span class="tag tag--html-css">HTML/CSS</span>
+      </div>
+      <p class="type-meta" style="margin-top: 1rem">
+        0.7rem · padding 0.5rem 1rem · border-radius 100px · opacity 0.7
+      </p>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <!-- BUTTONS & INTERACTIVE -->
+    <section class="sg-section">
+      <p class="sg-label">Buttons & Interactive</p>
+      <div class="sg-row" style="align-items: center">
+        <div class="sg-item">
+          <button class="hero-button">Let's work together :)</button>
+          <span class="sg-name"
+            >hero-button — transparent · orange-200 border · hover fills
+            orange-300</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <!-- COMPONENTS -->
+    <section class="sg-section">
+      <p class="sg-label">Component — Project Detail</p>
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap">
+        <div class="project-detail">
+          <span class="detail-label">Role</span>
+          <span class="detail-value">UI/UX Designer</span>
+        </div>
+        <div class="project-detail">
+          <span class="detail-label">Year</span>
+          <span class="detail-value">2024</span>
+        </div>
+        <div class="project-detail">
+          <span class="detail-label">Tools</span>
+          <span class="detail-value">Figma · HTML/CSS</span>
+        </div>
+      </div>
+      <p class="type-meta" style="margin-top: 1rem">
+        border-left: 1px solid orange-200 · padding-left 1rem
+      </p>
+    </section>
+
+    <hr class="sg-divider" />
+
+    <section class="sg-section">
+      <p class="sg-label">Component — Card Case</p>
+      <div class="card-case-demo">
+        <div
+          style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem"
+        >
+          <p class="card-title">BPM Tracker</p>
+          <p class="card-subtitle">Mobile App</p>
+          <p class="card-text">
+            A minimal app for tracking heart rate throughout the day, with
+            smooth data visualisation.
+          </p>
+        </div>
+        <div class="card-img-placeholder">image</div>
+      </div>
+      <p class="type-meta" style="margin-top: 1rem">
+        background #111111 · border-radius 5px · padding 0 3rem 3rem
+      </p>
+    </section>
+  </body>
+</html>
