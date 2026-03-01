@@ -26,7 +26,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.9;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.7px;
     margin-bottom: 3.5rem;
   }
 
@@ -36,7 +36,7 @@
     gap: 40px;
   }
 
-  &-card {
+  &-card_case {
     display: flex;
     flex-direction: column;
     gap: .8rem;
@@ -66,8 +66,8 @@
   }
 }
 
-// ── Card case ────────────────────────────────────
-.card-case {
+// ── card_case case ────────────────────────────────────
+.card_case-case {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -75,38 +75,38 @@
   background: #111111;
   border-radius: 5px;
 
-  .left-card {
+  .left-card_case {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: .5rem;
   }
 
-  .right-card {
+  .right-card_case {
     flex: 1;
   }
 
-  .card-img {
+  .card_case-img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
   }
 
-  .card-title {
+  .card_case-title {
     font-size: 1.1rem;
     font-weight: 700;
     margin: 0;
   }
 
-  .card-subtitle {
+  .card_case-subtitle {
     font-size: .85rem;
     color: var(--accent-color);
     letter-spacing: .06em;
     margin: 0;
   }
 
-  .card-text {
+  .card_case-text {
     font-size: .9rem;
     font-weight: 300;
     line-height: 1.7;
@@ -114,7 +114,7 @@
     opacity: .7;
   }
 }
-
+// ── case study  ───────────────────────────────
 .project-details {
   display: flex;
   flex-direction: column;
