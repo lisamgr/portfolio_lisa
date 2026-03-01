@@ -27,7 +27,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
-.case-card {
+.case-card_case {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -53,7 +53,7 @@
   margin-bottom: 3rem;
 }
 
-.card-case {
+.card_case-case {
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -61,33 +61,33 @@
   background: #111111;
   border-radius: 5px;
 }
-.card-case .left-card {
+.card_case-case .left-card_case {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.card-case .right-card {
+.card_case-case .right-card_case {
   flex: 1;
 }
-.card-case .card-img {
+.card_case-case .card_case-img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
 }
-.card-case .card-title {
+.card_case-case .card_case-title {
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0;
 }
-.card-case .card-subtitle {
+.card_case-case .card_case-subtitle {
   font-size: 0.85rem;
   color: var(--accent-color);
   letter-spacing: 0.06em;
   margin: 0;
 }
-.card-case .card-text {
+.card_case-case .card_case-text {
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.7;

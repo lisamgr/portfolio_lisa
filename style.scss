@@ -641,7 +641,11 @@ em.em--fun {
 
 
 // ── Case study ───────────────────────────────────
+
+
 .case {
+
+  margin-bottom: 2rem;
   &-title {
     font-size: 1.5rem;
     letter-spacing: -.06em;
@@ -650,7 +654,7 @@ em.em--fun {
   }
 
   &-text {
-    max-width: 800px;
+     max-width: 65ch;
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.7;
@@ -677,13 +681,11 @@ em.em--fun {
     transition: transform .45s ease;
   }
 
-  &-img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin-inline: auto;
-  }
+ &-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
   &-bio {
     font-size: .9rem;
@@ -717,7 +719,7 @@ em.em--fun {
  .card_case-img {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
+  //aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 6px;
 }
