@@ -1,0 +1,39 @@
+/* --- VARIABLES --- */
+:root {
+  /* orange */
+  --colors-orange-100: #ffe9e1;
+  --colors-orange-200: #fd9d75;
+  --colors-orange-300: #da5810;
+  --colors-orange-400: #903807;
+  --colors-orange-500: #4c1a02;
+
+  /* dark */
+  --colors-dark-500: #000000;
+  --colors-dark-400: #080707;
+  --colors-dark-300: #191818;
+  --colors-dark-200: #2c2b2b;
+  --colors-dark-100: #413f3f;
+
+  /* white / gray */
+  --colors-white-100: #f3f1f1;
+  --colors-white-200: #d8d8d8;
+  --colors-white-300: #aeadad;
+  --colors-white-400: #919191;
+  --colors-white-500: #6d6d6d;
+
+  /* accents */
+  --colors-peach:    #ffb4a2;
+  --colors-mint:     #b5ead7;
+  --colors-lavender: #c9b8f5;
+  --colors-sky:      #bde0fe;
+  --colors-yellow:   #ffd6a5;
+  --colors-blue:     #a2d2ff;
+  --colors-quack:    #FFD412;
+
+  /* divers */
+  --colors-border:   #222222;
+  --colors-image-bg: #F6F8F7;
+
+  --font: "DM Mono", monospace;
+  --secondary-font: "Google Sans Flex", sans-serif;
+}

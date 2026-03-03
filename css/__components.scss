@@ -1,0 +1,85 @@
+/* --- TAGS --- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tag {
+  font-size: .8rem;
+  //padding: 0.5rem 1rem;
+  //border-radius: 100px;
+  //border: 1px solid var(--colors-orange-200);
+  color: var(--colors-orange-200);
+  opacity: .7;
+
+  &::before { 
+    content: "∷"; 
+    letter-spacing: -0.25em;
+    margin-right: 0.65rem;
+    position: relative;
+    top: -0.5px;
+  }
+
+  &--app       { border-color: var(--colors-peach);    color: var(--colors-peach); }
+  &--ui        { border-color: var(--colors-mint);     color: var(--colors-mint); }
+  &--ux        { border-color: var(--colors-lavender); color: var(--colors-lavender); }
+  &--website   { border-color: var(--colors-yellow);   color: var(--colors-yellow); }
+  &--component { border-color: var(--colors-blue);     color: var(--colors-blue); }
+  &--html-css  { border-color: var(--colors-sky);      color: var(--colors-sky); }
+}
+
+.tag-pill {
+  font-size: .8rem;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: 1px solid var(--colors-orange-200);
+  color: var(--colors-orange-200);
+  opacity: .7;
+
+  &--app       { border-color: var(--colors-peach);    color: var(--colors-peach); }
+  &--ui        { border-color: var(--colors-mint);     color: var(--colors-mint); }
+  &--ux        { border-color: var(--colors-lavender); color: var(--colors-lavender); }
+  &--website   { border-color: var(--colors-yellow);   color: var(--colors-yellow); }
+  &--component { border-color: var(--colors-blue);     color: var(--colors-blue); }
+  &--html-css  { border-color: var(--colors-sky);      color: var(--colors-sky); }
+}
+
+/* --- DUCK --- */
+.duck {
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+
+  .quack {
+    font-family: "Shadows Into Light", cursive;
+    font-size: 1.4rem;
+    color: var(--colors-quack);
+    position: absolute;
+    white-space: nowrap;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+  }
+
+  img {
+    width: 64px;
+    transform: scaleX(-1);
+    transform-origin: bottom center;
+  }
+
+  &:hover .quack { opacity: 1; }
+  &:hover img { animation: wobble-mirrored 0.5s ease; }
+}
+
+@keyframes wobble-mirrored {
+  0%   { transform: scaleX(-1) rotate(0deg); }
+  20%  { transform: scaleX(-1) rotate(-14deg); }
+  40%  { transform: scaleX(-1) rotate(11deg); }
+  60%  { transform: scaleX(-1) rotate(-8deg); }
+  80%  { transform: scaleX(-1) rotate(5deg); }
+  100% { transform: scaleX(-1) rotate(0deg); }
+}

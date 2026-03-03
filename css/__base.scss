@@ -1,0 +1,51 @@
+/* --- RESET & BASE --- */
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+
+body {
+  background-color: var(--colors-dark-300);
+  color: var(--colors-white-100);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--colors-orange-300);
+  text-decoration: none;
+}
+
+h1 { font-size: 2.5rem; margin-bottom: 1.6rem; }
+h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* --- CONTAINER --- */
+.container {
+  max-width: 60vw;
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 5vw, 3rem);
+}
+
+/* --- EM HIGHLIGHTS --- */
+em.em--peach    { color: var(--colors-peach);    font-style: normal; }
+em.em--mint     { color: var(--colors-mint);     font-style: normal; }
+em.em--lavender { color: var(--colors-lavender); font-style: normal; }
+em.em--sky      { color: var(--colors-sky);      font-style: normal; }
+
+em.em--fun {
+  color: var(--colors-orange-200);
+  font-style: normal;
+
+  &:hover {
+    font-style: italic;
+  }
+}
