@@ -1,0 +1,24 @@
+.clustr {
+  .case-hero {
+    picture {
+    display: contents;
+  }
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #937FF0;
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    margin-block: 4rem;
+
+    img {
+      width: min(2000px, 80%);
+      width: 100%;
+    }
+
+    
+    }
+  
+}

@@ -536,14 +536,6 @@ footer .belgium:hover {
   margin-bottom: 3rem;
 }
 
-.fun-content {
-  flex: 1;
-  width: 100%;
-}
-.fun-content a {
-  display: block;
-}
-
 .fun-image {
   width: 100%;
   height: auto;
@@ -551,7 +543,15 @@ footer .belgium:hover {
   margin-bottom: 1rem;
   transition: transform 0.45s ease;
 }
-.fun-image:hover {
+
+.fun-content {
+  flex: 1;
+  width: 100%;
+}
+.fun-content a {
+  display: block;
+}
+.fun-content a:hover .fun-image {
   transform: scale(1.03);
 }
 
@@ -731,30 +731,6 @@ footer .belgium:hover {
   object-fit: cover;
 }
 
-/* --- RESPONSIVE TABLETTE --- */
-@media (max-width: 1100px) and (min-width: 769px) {
-  .container {
-    max-width: 90vw;
-  }
-  .hero-section {
-    gap: 2rem;
-  }
-  .hero-content {
-    max-width: 60%;
-  }
-  .hero-illustration {
-    width: 180px;
-  }
-  .about-section {
-    gap: 2rem;
-  }
-  .about-content {
-    max-width: 60%;
-  }
-  .about-illustration {
-    width: 180px;
-  }
-}
 /* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
   .navbar {
@@ -785,13 +761,6 @@ footer .belgium:hover {
   }
   .container {
     max-width: 100%;
-  }
-  /* case study */
-  .card_case-case {
-    flex-direction: column;
-  }
-  .card_case-case .right-card_case {
-    width: 100%;
   }
   /* index */
   .hero-section {
@@ -827,20 +796,26 @@ footer .belgium:hover {
     width: 150px;
     align-self: center;
   }
-}
-/* --- RESPONSIVE CASE STUDY --- */
-@media (max-width: 768px) {
-  .case-grid-images .col-12,
-  .case-grid-images .col-7,
-  .case-grid-images .col-5 {
-    grid-column: span 12;
+  /* case study */
+  .card_case-case {
+    flex-direction: column;
+  }
+  .card_case-case .right-card_case {
+    width: 100%;
   }
   .case-info {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    align-items: start;
-    margin-block: 5rem;
+  }
+  .case-hero {
+    padding: 2rem 0;
+  }
+  .case-hero img {
+    width: 95vw;
+    max-width: 95vw;
+  }
+  .case-grid-images [class^=col-] {
+    grid-column: span 12;
   }
 }
 .cinemon .case-hero {
@@ -1108,4 +1083,23 @@ span.cinemon {
   background: linear-gradient(0deg, #2b2b2b 47%, #3a3a3a 100%);
   border-color: #555;
   box-shadow: -0.4em -0.5em 0.25em hsla(0, 0%, 0%, 0.25), 0 0 0 hsla(0, 0%, 0%, 0.3), 0.04em 0.04em 0.04em hsla(0, 0%, 0%, 0.4) inset, -0.1em -0.1em 0.04em hsla(0, 0%, 100%, 0.05) inset;
+}
+
+.clustr .case-hero picture {
+  display: contents;
+}
+.clustr .case-hero {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #937FF0;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  margin-block: 4rem;
+}
+.clustr .case-hero img {
+  width: min(2000px, 80%);
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -210,23 +210,24 @@
   margin-bottom: 3rem;
 }
 
-.fun-content {
-  flex: 1;
-  width: 100%;
-
-  a {
-    display: block;
-  }
-}
-
 .fun-image {
   width: 100%;
   height: auto;
   background: var(--colors-image-bg);
   margin-bottom: 1rem;
   transition: transform .45s ease;
-  &:hover { 
-    transform: scale(1.03); 
+}
+
+.fun-content {
+  flex: 1;
+  width: 100%;
+
+  a {
+    display: block;
+
+    &:hover .fun-image {
+      transform: scale(1.03);
+    }
   }
 }
 
