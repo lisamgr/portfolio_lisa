@@ -140,10 +140,6 @@
   height: auto;
   display: block;
   border-radius: 8px;
+   object-fit: cover;
 }
 
-.case-grid-images .col-7 img,
-.case-grid-images .col-5 img {
-  height: 100%;
-  object-fit: cover;
-}

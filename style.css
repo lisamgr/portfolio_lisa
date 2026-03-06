@@ -121,7 +121,7 @@ em.em--fun:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem clamp(1.5rem, 5vw, 3rem) 10rem;
+  padding: 2rem clamp(1.5rem, 5vw, 3rem) 5rem;
   position: relative;
   z-index: 1001;
 }
@@ -728,11 +728,6 @@ footer .belgium:hover {
   height: auto;
   display: block;
   border-radius: 8px;
-}
-
-.case-grid-images .col-7 img,
-.case-grid-images .col-5 img {
-  height: 100%;
   object-fit: cover;
 }
 
@@ -870,6 +865,21 @@ span.cinemon {
   width: min(1600px, 80%);
 }
 .bpm .case-featured {
+  background-color: var(--colors-orange-300);
+}
+
+span.cinemon {
+  font-weight: 600;
+  color: #c52c27;
+}
+
+.homehub .case-hero {
+  background-color: #FF924C;
+}
+.homehub .case-hero img {
+  width: min(1600px, 80%);
+}
+.homehub .case-featured {
   background-color: var(--colors-orange-300);
 }
 
