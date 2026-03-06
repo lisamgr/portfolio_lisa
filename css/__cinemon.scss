@@ -1,0 +1,50 @@
+.cinemon {
+
+  .case-hero {
+    background-color: #9B1A16;
+
+    img {
+      width: min(1600px, 80%);
+    }
+  }
+
+  .case-featured {
+    background-color: var(--colors-orange-300);
+  }
+
+}
+
+span.cinemon {
+  font-weight: 600;
+  color: #c52c27;
+
+
+// layout de la grille
+.case-grid-images {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+
+  .col-12 { grid-column: span 12; }
+  .col-7  { grid-column: span 7; }
+  .col-5  { grid-column: span 5; }
+
+  margin-bottom: 4rem;
+}
+
+// images dans la grille
+.case-grid-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.case-grid-images .col-7 img,
+.case-grid-images .col-5 img {
+  height: 100%;
+  object-fit: cover;
+}
+
+}

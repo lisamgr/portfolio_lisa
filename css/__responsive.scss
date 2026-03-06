@@ -106,3 +106,24 @@
     align-self: center;
   }
 }
+
+/* --- RESPONSIVE CASE STUDY --- */
+@media (max-width: 768px) {
+  .case-grid-images {
+    .col-12,
+    .col-7,
+    .col-5 {
+      grid-column: span 12;
+    }
+  }
+// Project info en deux colonnes
+.case-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: start;
+  margin-block: 5rem;
+
+}
+
+}
