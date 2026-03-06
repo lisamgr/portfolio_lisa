@@ -1,0 +1,229 @@
+// ── Wrapper principal ─────────────────────────────────────────────────────────
+// Le dark mode est toggleé sur ce wrapper, pas sur le body
+// Comme ça nav et footer restent dans le thème du site
+
+.kee-wrapper {
+  background-color: #CCCCCC;
+  color: black;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-block: 3rem;
+  transition: background-color 0.3s, color 0.3s;
+
+  &.dark-mode {
+    background-color: #111;
+    color: #eaeaea;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    transition: all .3s;
+  }
+
+  // ── Layout ──────────────────────────────────────────────────────────────────
+
+  .layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  // ── Logo ────────────────────────────────────────────────────────────────────
+
+  .logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.3rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    color: #888888;
+  }
+
+  // ── Keyboard ────────────────────────────────────────────────────────────────
+
+  .keyboard {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: 3rem repeat(6, 6rem);
+    gap: 1rem;
+    padding: 2rem;
+    margin: 2rem;
+    border: 1px solid #BEBEBE;
+    border-radius: 10px;
+    box-shadow: 0 30px 20px rgba(0, 0, 0, 0.3),
+      inset 0 2px 15px rgba(255, 255, 255, 0.3),
+      inset 0 -8px 20px rgba(0, 0, 0, 0.4);
+
+    grid-template-areas:
+      "h h h h"
+      "fn16 fn17 fn18 fn19"
+      "kDel kEqu kDiv kMul"
+      "k7   k8   k9   kSub"
+      "k4   k5   k6   kAdd"
+      "k1   k2   k3   kEnt"
+      "k0   k0   kCom kEnt";
+  }
+
+  &.dark-mode .keyboard {
+    border: 1px solid #1a1a1a;
+    box-shadow:
+      0 40px 35px rgba(0, 0, 0, 0.9),
+      inset 0 1px 6px rgba(255, 255, 255, 0.04),
+      inset 0 -12px 25px rgba(0, 0, 0, 1);
+  }
+
+  // ── Items ───────────────────────────────────────────────────────────────────
+
+  .item {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgba(231, 231, 231, 1) 47%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 0.5em;
+    box-shadow:
+      -0.2em -0.12em 0.50em 0.1em hsla(0, 0%, 0%, 0.2),
+      -0.1em 0.15em 0.25em -0.05em hsla(0, 0%, 0%, 0.25),
+      0.04em 0em 0.04em hsla(0, 0%, 0%, 0.3) inset,
+      -0.1em 0.3em 0.04em hsla(0, 0%, 100%, 0.8) inset;
+    color: #626262;
+    margin: 0 0.375em;
+    padding: 0.75em;
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow:
+        0 0 6px rgba(220, 225, 255, 0.25),
+        inset 0 3px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    &:hover {
+      position: relative;
+      top: 1px;
+      left: 1px;
+      border-color: #e5e5e5;
+      cursor: pointer;
+    }
+  }
+
+  &.dark-mode .item {
+    background: linear-gradient(0deg, #2b2b2b 47%, #3a3a3a 100%);
+    box-shadow:
+      -0.8em -0.25em 0.25em hsla(0,0%,0%,0.25),
+      0 0 0 0.1em hsla(0,0%,0%,0.3),
+      0.04em 0.04em 0.04em hsla(0,0%,0%,0.4) inset,
+      -0.1em -0.1em 0.04em hsla(0,0%,100%,0.05) inset;
+    color: #FFF8;
+
+    &:hover {
+      color: #e2e6ff;
+      box-shadow:
+        0 0 10px rgba(200, 210, 255, 0.25),
+        0 0 4px rgba(200, 210, 255, 0.35) inset;
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow:
+        0 0 6px rgba(220, 225, 255, 0.25),
+        inset 0 3px 8px rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  // ── Grid areas ──────────────────────────────────────────────────────────────
+
+  .header { grid-area: h; }
+  .k0     { grid-area: k0; }
+  .k1     { grid-area: k1; }
+  .k2     { grid-area: k2; }
+  .k3     { grid-area: k3; }
+  .k4     { grid-area: k4; }
+  .k5     { grid-area: k5; }
+  .k6     { grid-area: k6; }
+  .k7     { grid-area: k7; }
+  .k8     { grid-area: k8; }
+  .k9     { grid-area: k9; }
+  .kCom   { grid-area: kCom; }
+  .kAdd   { grid-area: kAdd; }
+  .kSub   { grid-area: kSub; }
+  .kEnt   { grid-area: kEnt; }
+  .kDel   { grid-area: kDel; }
+  .kEqu   { grid-area: kEqu; }
+  .kDiv   { grid-area: kDiv; }
+  .kMul   { grid-area: kMul; }
+  .fn16   { grid-area: fn16; }
+  .fn17   { grid-area: fn17; }
+  .fn18   { grid-area: fn18; }
+  .fn19   { grid-area: fn19; }
+
+  .fn16, .fn17, .fn18, .fn19 {
+    float: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+
+  .kEnt {
+    display: flex;
+    align-items: end;
+    padding: 1rem;
+  }
+
+  // ── Toggle ──────────────────────────────────────────────────────────────────
+
+  .toggle {
+    display: flex;
+    padding: 2rem;
+    color: #666666;
+    align-items: center;
+    justify-content: center;
+
+    .switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      width: 5rem;
+      height: 2.5rem;
+      border-radius: 20rem;
+    }
+
+    button {
+      justify-self: start;
+      padding: 1rem;
+      border: 1px solid white;
+      height: 1.5rem;
+      background: linear-gradient(0deg, rgba(231, 231, 231, 1) 47%, rgba(255, 255, 255, 1) 100%);
+      border-radius: 0.5em;
+      box-shadow:
+        -0.2em -0.12em 0.50em 0.1em hsla(0, 0%, 0%, 0.2),
+        -0.1em 0.3em 0.04em hsla(0, 0%, 100%, 0.8) inset;
+      color: #626262;
+
+      &:hover {
+        position: relative;
+        top: 1px;
+        left: 1px;
+        border-color: #e5e5e5;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &.dark-mode .toggle button {
+    background: linear-gradient(0deg, #2b2b2b 47%, #3a3a3a 100%);
+    border-color: #555;
+    box-shadow:
+      -0.4em -0.5em 0.25em hsla(0,0%,0%,0.25),
+      0 0 0 hsla(0,0%,0%,0.3),
+      0.04em 0.04em 0.04em hsla(0,0%,0%,0.4) inset,
+      -0.1em -0.1em 0.04em hsla(0,0%,100%,0.05) inset;
+  }
+}
