@@ -1,0 +1,21 @@
+.uicards {
+
+  .case-hero {
+    background-color: #212529;
+
+    img {
+      width: min(1600px, 80%);
+    }
+  }
+
+  .case-featured {
+    background-color: var(--colors-orange-300);
+  }
+
+}
+
+span.cinemon {
+  font-weight: 600;
+  color: #c52c27;
+
+}

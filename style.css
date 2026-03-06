@@ -128,7 +128,7 @@ em.em--fun:hover {
 
 .nav-logo {
   font-family: var(--font);
-  font-size: 0.95rem;
+  font-size: 1rem;
   letter-spacing: 0.02em;
   color: var(--colors-white-100);
   z-index: 1002;
@@ -184,7 +184,7 @@ footer {
   align-items: center;
   padding: 2.5rem clamp(1.5rem, 5vw, 3rem);
   border-top: 1px solid var(--colors-border);
-  font-size: 0.78rem;
+  font-size: 1rem;
 }
 footer .belgium:hover {
   background-image: linear-gradient(to right, #2a2a2a, #ffe602, #d62b2b);
@@ -880,6 +880,21 @@ span.cinemon {
   width: min(1600px, 80%);
 }
 .homehub .case-featured {
+  background-color: var(--colors-orange-300);
+}
+
+span.cinemon {
+  font-weight: 600;
+  color: #c52c27;
+}
+
+.uicards .case-hero {
+  background-color: #212529;
+}
+.uicards .case-hero img {
+  width: min(1600px, 80%);
+}
+.uicards .case-featured {
   background-color: var(--colors-orange-300);
 }
 
