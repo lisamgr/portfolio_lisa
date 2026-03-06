@@ -70,10 +70,13 @@
 // Project info en deux colonnes
 .case-info {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  //width: 60%;
+  justify-content: center;
   gap: 3rem;
   align-items: start;
   margin-block: 5rem;
+  
 
   &__label {
     font-size: 1.8rem;
@@ -113,12 +116,22 @@
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
   align-items: stretch;
-
-  .col-12 { grid-column: span 12; }
-  .col-7  { grid-column: span 7; }
-  .col-5  { grid-column: span 5; }
-
-  margin-bottom: 4rem;
+  
+ .col-1  { grid-column: span 1; }
+ .col-2  { grid-column: span 2; }
+ .col-3  { grid-column: span 3; }
+ .col-4  { grid-column: span 4; }
+ .col-5  { grid-column: span 5; }
+ .col-6  { grid-column: span 6; }
+ .col-7  { grid-column: span 7; }
+ .col-8  { grid-column: span 8; }
+ .col-9  { grid-column: span 9; }
+ .col-10 { grid-column: span 10; }
+ .col-11 { grid-column: span 11; }
+ .col-12 { grid-column: span 12; }
+ 
+ 
+   margin-bottom: 4rem;
 }
 
 // images dans la grille

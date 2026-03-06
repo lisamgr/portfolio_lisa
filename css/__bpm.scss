@@ -1,7 +1,7 @@
-.cinemon {
+.bpm {
 
   .case-hero {
-    background-color: #9B1A16;
+    background-color: var(--colors-lavender);
 
     img {
       width: min(1600px, 80%);
@@ -18,4 +18,6 @@ span.cinemon {
   font-weight: 600;
   color: #c52c27;
 
-}
+  }
+
+  
