@@ -255,3 +255,99 @@
     opacity: 1;
   }
 }
+
+/* --- grid index --- */
+
+@keyframes hueRotate {
+  from { filter: hue-rotate(0deg); }
+  to   { filter: hue-rotate(360deg); }
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0.3rem;
+  margin-block: 4rem;
+  grid-template-areas:
+    "cell-1 cell-1 cell-2 cell-3 cell-3"
+    "cell-4 cell-5 cell-5 cell-3 cell-3"
+    "cell-4 cell-6 cell-7 cell-8 cell-8"
+    "cell-9 cell-9 cell-9 cell-9 cell-9";
+}
+
+.work-grid__item {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 100px;
+}
+
+.cell-1 { grid-area: cell-1; padding-bottom: 40%; }
+.cell-2 { grid-area: cell-2; padding-bottom: 40%; }
+.cell-3 { grid-area: cell-3; padding-bottom: 80%; }
+.cell-4 { grid-area: cell-4; padding-bottom: 80%; }
+.cell-5 { grid-area: cell-5; padding-bottom: 40%; }
+.cell-6 { grid-area: cell-6; padding-bottom: 40%; }
+.cell-7 { grid-area: cell-7; padding-bottom: 40%; }
+.cell-8 { grid-area: cell-8; padding-bottom: 40%; }
+.cell-9 { grid-area: cell-9; padding-bottom: 20%; }
+
+.work-grid__item__container,
+.work-grid__item__title,
+.work-grid__item a {
+  position: absolute;
+  inset: 0;
+}
+
+.work-grid__item__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-grid__item__content video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.work-grid__item__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.work-grid__item a:hover .work-grid__item__content {
+  filter: blur(44px);
+  transform: scale(1.5);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.work-grid__item a:hover {
+  animation: 10s infinite hueRotate;
+}
+
+.work-grid__item a:hover .work-grid__item__title {
+  opacity: 1;
+}
+
+.c-orange   { background: #da5810; }
+.c-lavender { background: #c9b8f5; }
+.c-dark     { background: #2c2b2b; }
+.c-peach    { background: #ffb4a2; }
+.c-mint     { background: #b5ead7; }
+.c-sky      { background: #bde0fe; }
+.c-yellow   { background: #ffd6a5; }
+.c-darker   { background: #413f3f; }
