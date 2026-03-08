@@ -116,6 +116,15 @@ em.em--fun:hover {
   font-style: italic;
 }
 
+.icon-cta {
+  font-size: 1rem;
+}
+
+.icon-linkedin::before,
+.material-symbols-outlined {
+  font-size: 1rem;
+}
+
 /* --- NAVIGATION --- */
 .navbar {
   display: flex;
@@ -152,7 +161,7 @@ em.em--fun:hover {
   gap: 2rem;
 }
 .nav-links a {
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.08em;
   color: var(--colors-white-100);
   transition: opacity 0.2s, color 0.2s;
@@ -760,9 +769,8 @@ footer .belgium:hover {
   padding: 3rem 0;
   margin-block: 4rem;
 }
-.case-hero img {
-  width: min(600px, 80%);
-  max-width: 80%;
+.case-hero .case-hero img {
+  width: min(1600px, 80%);
 }
 
 .project-details {
@@ -1253,4 +1261,156 @@ span.cinemon {
 .clustr .case-hero img {
   width: min(2000px, 80%);
   width: 100%;
+}
+
+.contact-cta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.button {
+  --accent-color: var(--colors-orange-200);
+  --primary-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid var(--accent-color);
+  border-radius: 50px;
+  background-color: var(--primary-color);
+  height: auto;
+  width: auto;
+  padding: 0.75rem 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.9rem;
+  letter-spacing: -0.2px;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: var(--colors-orange-300);
+  border-color: var(--colors-orange-300);
+}
+
+.button:hover span,
+.button:hover i {
+  color: var(--colors-dark-300);
+}
+
+.button .circle {
+  position: absolute;
+  width: 175%;
+  aspect-ratio: 1;
+  background-color: var(--colors-orange-300);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0% 0%;
+  scale: 0;
+  transition: scale 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.button:hover .circle {
+  scale: 1;
+}
+
+.button span,
+.button i {
+  position: relative;
+  color: var(--accent-color);
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.action-buttons.show {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.round-btn {
+  padding: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  aspect-ratio: 1;
+  text-decoration: none;
+}
+
+.round-btn i {
+  font-size: 0.9rem;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon-v1.0/fonts/icomoon.eot?ybpic3");
+  src: url("../fonts/icomoon-v1.0/fonts/icomoon.eot?ybpic3#iefix") format("embedded-opentype"), url("../fonts/icomoon-v1.0/fonts/icomoon.ttf?ybpic3") format("truetype"), url("../fonts/icomoon-v1.0/fonts/icomoon.woff?ybpic3") format("woff"), url("../fonts/icomoon-v1.0/fonts/icomoon.svg?ybpic3#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin:before {
+  content: "\e900";
+}
+
+.wip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.wip p {
+  font-family: var(--font);
+  font-size: 7rem;
+  color: var(--colors-quack);
+  position: relative;
+  line-height: 0.9;
+  letter-spacing: -0.2rem;
+}
+
+.wip img {
+  max-width: 200px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -0.5rem;
+  position: relative;
+  top: -0.3rem;
+}
+
+.span-wip {
+  font-family: var(--font);
+  font-size: 7rem;
+  color: var(--colors-quack);
+  display: block;
 }/*# sourceMappingURL=style.css.map */

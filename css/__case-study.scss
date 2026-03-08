@@ -32,10 +32,11 @@
   padding: 3rem 0;
   margin-block: 4rem;
 
+.case-hero {
   img {
-    width: min(600px, 80%);
-    max-width: 80%;
+    width: min(1600px, 80%);
   }
+}
 }
 
 // ── label avec border left ───────────────────────────────────

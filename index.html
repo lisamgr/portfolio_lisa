@@ -7,10 +7,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- This will link our stylesheet to our index.html: -->
+
     <link rel="stylesheet" href="style.css" />
-    <!-- This will link the google icon for our hamburger bar 
-      so we have access to use it -->
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
@@ -32,9 +31,11 @@
       <ul class="nav-links">
         <li><a href="/index.html" class="link-work">work</a></li>
         <li><a href="/fun.html" class="link-fun">fun</a></li>
-        <li><a href="/about.html" class="link-info">info</a></li>
+        <li><a href="/about.html" class="link-info">about</a></li>
         <li><a href="/contact.html" class="link-contact">contact</a></li>
-        <li><a href="/resume.html" class="link-resume">resume</a></li>
+        <li>
+          <a href="img/Lisa_Mag-Resume.pdf" class="link-resume">resume</a>
+        </li>
       </ul>
     </nav>
 
@@ -55,7 +56,27 @@
             <em class="em em--sky">video game</em>.
           </p>
           <span class="hero-cta">I am currently looking for an internship</span>
-          <button class="hero-button">Let's work together :)</button>
+          <div class="contact-cta">
+            <div class="button" id="mainButton">
+              <div class="circle"></div>
+              <span>Let's work together :)</span>
+            </div>
+
+            <div class="action-buttons" id="actionButtons">
+              <a
+                href="www.linkedin.com/in/lisa-mag-773380388"
+                target="_blank"
+                class="button round-btn"
+              >
+                <div class="circle"></div>
+                <span class="icon-linkedin"></span>
+              </a>
+              <a href="mailto:lisa.mag@live.be" class="button round-btn">
+                <div class="circle"></div>
+                <span class="material-symbols-outlined">mail</span>
+              </a>
+            </div>
+          </div>
         </div>
         <div class="hero-illustration">
           <span class="quack">quack!</span>
@@ -179,8 +200,10 @@
     <footer>
       <span class="belgium">made in belgium</span>
       <nav class="socials">
-        <a href="https://www.behance.net/lisamag">behance</a>
-        <a href="#">linkedin</a>
+        <a href="https://www.behance.net/lisamag" target="_blank">behance</a>
+        <a href="https://www.linkedin.com/in/lisa-mag-773380388" target="_blank"
+          >linkedin</a
+        >
       </nav>
     </footer>
 

@@ -12,3 +12,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// NOTE: This doesn't use GSAP, It's just a recreation of the effect that's been used on the site
+
+var circles = document.querySelectorAll(".button .circle");
+var circleButtons = [];
+
+window.addEventListener("resize", () => {
+  circleButtons = Array.from(circles, (circle) =>
+    circle.parentNode.getBoundingClientRect(),
+  );
+});
+
+circles.forEach((circle, index) => {
+  circleButtons.push(circle.parentNode.getBoundingClientRect());
+
+  circle.parentNode.addEventListener("mousemove", (mouseMove) => {
+    const buttonRect = circleButtons[index];
+
+    circle.style.top = `${mouseMove.clientY - buttonRect.y}px`;
+    circle.style.left = `${mouseMove.clientX - buttonRect.x}px`;
+  });
+});
+
+const mainButton = document.getElementById("mainButton");
+const actionButtons = document.getElementById("actionButtons");
+
+mainButton.addEventListener("click", () => {
+  actionButtons.classList.toggle("show");
+});
