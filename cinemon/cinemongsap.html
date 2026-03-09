@@ -20,8 +20,12 @@
     <link rel="manifest" href="/site.webmanifest" />
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    
   </head>
   <body class="cinemon">
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
     <!-- Navigation ... -->
     <nav class="navbar">
       <a href="/index.html" class="nav-logo">lisa<span>mag</span></a>
@@ -193,5 +197,34 @@
       }, {passive: false});*/
       
       </script>
+     
+<script>
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+let hauteurNavig = window.innerHeight;
+  gsap.from('.project-detail', {
+      scrollTrigger:{
+          trigger: ".project-details",
+          toggleActions: "play none none none",
+          start: `top ${hauteurNavig*0.50}`,
+          //start attend deux infos : le bord de l'élément (top ou bottom) et l'endroit dans le vewport où doit commencer l'animation, on peut utiliser top, bottom, center ou en px ou en %
+          end:"bottom bottom",
+          markers:true,
+          // ajoute des indicateurs pour le lancement de l'animation
+      },
+      x: 0,
+      opacity:0,
+      stagger:.5,
+      duration: 1
+  });
+
+  
+// create the scrollSmoother before your scrollTriggers
+  ScrollSmoother.create({
+    smooth: 10, // how long (in seconds) it takes to "catch up" to the native scroll position
+    effects: true, // looks for data-speed and data-lag attributes on elements
+    smoothTouch: 0.2 // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  });</script>
+  </div>
+</div>
   </body>
 </html>
