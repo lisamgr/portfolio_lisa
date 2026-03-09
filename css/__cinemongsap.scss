@@ -1,0 +1,48 @@
+
+
+.p2{
+  
+  position: relative;
+  z-index:2
+}
+.p2{
+  position: relative;
+  z-index:3
+}
+.p3{
+  position: relative;
+  z-index:4
+}
+
+.panel  {
+  //width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  //padding: 3rem 0;
+  margin-block: 4rem;
+
+
+  img {
+    width: min(1600px, 80%);
+    height: auto;
+  }
+}
+
+  
+
+
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: rgb(26, 38, 26);
+}
+
+.p3 {
+  background-color: rgb(40, 30, 63);
+}

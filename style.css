@@ -197,7 +197,8 @@ footer {
 }
 footer .belgium:hover {
   background-image: linear-gradient(to right, #2a2a2a, #ffe602, #d62b2b);
-  background-clip: text;
+  -webkit-background-clip: text;
+          background-clip: text;
   color: transparent;
 }
 
@@ -290,6 +291,7 @@ footer .belgium:hover {
 .duck {
   position: relative;
   cursor: pointer;
+  width: -moz-fit-content;
   width: fit-content;
 }
 .duck .quack {
@@ -399,7 +401,8 @@ footer .belgium:hover {
 .hero-illustration img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
 }
 
@@ -500,7 +503,8 @@ footer .belgium:hover {
 .about-illustration img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
 }
 
@@ -673,7 +677,8 @@ footer .belgium:hover {
 .work-grid__item__content video {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .work-grid__item__title {
@@ -887,7 +892,8 @@ footer .belgium:hover {
   height: auto;
   display: block;
   border-radius: 8px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* --- RESPONSIVE MOBILE --- */
@@ -1413,4 +1419,44 @@ span.cinemon {
   font-size: 7rem;
   color: var(--colors-quack);
   display: block;
+}
+
+.p2 {
+  position: relative;
+  z-index: 2;
+}
+
+.p2 {
+  position: relative;
+  z-index: 3;
+}
+
+.p3 {
+  position: relative;
+  z-index: 4;
+}
+
+.panel {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  place-items: center;
+  margin-block: 4rem;
+}
+.panel img {
+  width: min(1600px, 80%);
+  height: auto;
+}
+
+.p1 {
+  background-color: red;
+}
+
+.p2 {
+  background-color: rgb(26, 38, 26);
+}
+
+.p3 {
+  background-color: rgb(40, 30, 63);
 }/*# sourceMappingURL=style.css.map */

@@ -37,7 +37,8 @@ circles.forEach((circle, index) => {
 
 const mainButton = document.getElementById("mainButton");
 const actionButtons = document.getElementById("actionButtons");
-
-mainButton.addEventListener("click", () => {
-  actionButtons.classList.toggle("show");
-});
+if(mainButton!=undefined){
+  mainButton.addEventListener("click", () => {
+    actionButtons.classList.toggle("show");
+  });
+}
