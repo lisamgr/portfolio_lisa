@@ -47,12 +47,14 @@
   .case-hero {
     padding: 2rem 0;
     img {
-    width: 95vw;
-    max-width: 95vw;
-  }
+      width: 95vw;
+      max-width: 95vw;
+    }
   }
 
   .case-grid-images {
     [class^="col-"] { grid-column: span 12; }
   }
+
+
 }

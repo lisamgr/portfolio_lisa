@@ -1398,6 +1398,12 @@ span.cinemon {
   line-height: 0.9;
   letter-spacing: -0.2rem;
 }
+@media (max-width: 768px) {
+  .wip p {
+    font-size: 3rem;
+    letter-spacing: -0.1rem;
+  }
+}
 
 .wip img {
   max-width: 200px;
@@ -1407,10 +1413,39 @@ span.cinemon {
   position: relative;
   top: -0.3rem;
 }
+@media (max-width: 768px) {
+  .wip img {
+    max-width: 60px;
+    margin-left: -0.2rem;
+    top: -0.1rem;
+  }
+}
 
 .span-wip {
   font-family: var(--font);
   font-size: 7rem;
   color: var(--colors-quack);
   display: block;
+}
+@media (max-width: 768px) {
+  .span-wip {
+    font-size: 3rem;
+  }
+}
+
+.building-s {
+  display: inline-block;
+  animation: building 1.5s ease-in-out infinite;
+  letter-spacing: -0.2rem;
+}
+
+@keyframes building {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(8px) rotate(-5deg);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
 }/*# sourceMappingURL=style.css.map */
