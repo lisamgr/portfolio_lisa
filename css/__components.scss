@@ -14,9 +14,9 @@
   opacity: .7;
 
   &::before { 
-    content: "∷"; 
-    letter-spacing: -0.25em;
-    margin-right: 0.65rem;
+    content: "."; 
+    //letter-spacing: -0.25em;
+    //margin-right: 0.65rem;
     position: relative;
     top: -0.5px;
   }

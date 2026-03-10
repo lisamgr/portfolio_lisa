@@ -222,9 +222,7 @@ footer .belgium:hover {
   opacity: 0.7;
 }
 .tag::before {
-  content: "∷";
-  letter-spacing: -0.25em;
-  margin-right: 0.65rem;
+  content: ".";
   position: relative;
   top: -0.5px;
 }
