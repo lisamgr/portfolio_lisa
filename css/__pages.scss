@@ -124,6 +124,24 @@
   }
 }
 
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  
+  a {
+    color: var(--colors-white-100);
+    transition: color 0.2s;
+    
+    &:hover {
+      color: var(--colors-orange-300);
+    }
+  }
+  
+  svg {
+    display: block; // Enlève l'espace en dessous du SVG
+  }
+}
 /* --- ABOUT --- */
 .about-section {
   display: flex;

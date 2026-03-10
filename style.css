@@ -466,6 +466,22 @@ footer .belgium:hover {
   color: var(--colors-orange-300);
 }
 
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.contact-icons a {
+  color: var(--colors-white-100);
+  transition: color 0.2s;
+}
+.contact-icons a:hover {
+  color: var(--colors-orange-300);
+}
+.contact-icons svg {
+  display: block;
+}
+
 /* --- ABOUT --- */
 .about-section {
   display: flex;
